@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Select Box</title>
+</head>
+<body>
+  <h1>Dynamic Select Box Example</h1>
+  <select id="mySelect">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+  </select>
+
+  <script>
+    // Function to add options to the select box
+    function addOptionToSelect(text, value) {
+      const selectBox = document.getElementById('mySelect'); // Get the select box element
+
+      // Create a new option element
+      const option = document.createElement('option');
+
+      // Set the text and value for the option
+      option.text = text;
+      option.value = value;
+
+      // Append the option to the select box
+      selectBox.appendChild(option);
+    }
+
+    // Add options directly on load (DOMContentLoaded)
+    document.addEventListener('DOMContentLoaded', function () {
+      addOptionToSelect('Option 3', '3');
+      addOptionToSelect('Option 4', '4');
+    });
+  </script>
+</body>
+</html>
